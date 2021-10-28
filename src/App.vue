@@ -14,6 +14,9 @@
           </v-card-subtitle>
           <v-card-actions>
             <v-spacer/>
+            <v-btn link href="https://github.com/web-tech-tw" class="black white--text">
+              GitHub
+            </v-btn>
             <v-btn link href="https://discord.gg/xpyuq342nX" class="purple white--text">
               Discord
             </v-btn>
