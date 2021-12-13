@@ -102,6 +102,42 @@
         </div>
       </div>
     </div>
+    <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+      <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+        <div class="pt-5 pb-6 px-5">
+          <div class="flex items-center justify-between">
+            <div class="ml-auto">
+              <button
+                  class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  type="button">
+                <span class="sr-only">Close menu</span>
+                <svg aria-hidden="true" class="h-6 w-6" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="mt-6">
+            <nav class="grid gap-y-8">
+              <div v-for="(item, index) in menu" :key="index">
+                <a class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50" href="#">
+                  <svg aria-hidden="true" class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none"
+                       stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"/>
+                  </svg>
+                  <span class="ml-3 text-base font-medium text-gray-900">{{ item.name }}</span>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <router-view/>
   </div>
 </template>
