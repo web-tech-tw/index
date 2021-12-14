@@ -138,7 +138,7 @@
                     </svg>
                   </button>
                   <div
-                      class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                      class="absolute z-10 -ml-7 mt-3 transform px-2 w-screen max-w-md sm:px-0 sm:-ml-4 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                     <div
                         v-show="item.status"
                         class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
@@ -195,13 +195,13 @@ export default {
         items: [
           {
             name: "Discord",
-            description: "Get a better understanding of where your traffic is coming from.",
+            description: "歡迎加入",
             icon: "/assets/images/brands/discord.svg",
             action: () => location.assign("https://discord.gg/xpyuq342nX")
           },
           {
             name: "LINE OpenChat",
-            description: "Get a better understanding of where your traffic is coming from.",
+            description: "歡迎加入",
             icon: "/assets/images/brands/line.svg",
             action: () => location.assign("https://web-tech-tw.github.io/openchat")
           }
