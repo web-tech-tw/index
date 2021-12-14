@@ -49,21 +49,7 @@
                         class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 cursor-pointer"
                         @click="child.action"
                     >
-                      <svg
-                          aria-hidden="true"
-                          class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                        />
-                      </svg>
+                      <img class="rounded-full" :src="child.icon" :alt="child.name" width="30" height="30">
                       <div class="ml-4">
                         <p class="text-base font-medium text-gray-900">
                           {{ child.name }}
@@ -164,21 +150,7 @@
                             class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 cursor-pointer"
                             @click="child.action"
                         >
-                          <svg
-                              aria-hidden="true"
-                              class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                            />
-                          </svg>
+                          <img class="rounded-full" :src="child.icon" :alt="child.name" width="30" height="30">
                           <div class="ml-4">
                             <p class="text-base font-medium text-gray-900">
                               {{ child.name }}
@@ -198,13 +170,7 @@
                     type="button"
                     @click="item.action"
                 >
-                  <svg aria-hidden="true" class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none"
-                       stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                        stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"/>
-                  </svg>
+                  <img class="rounded-full" :src="item.icon" :alt="item.name" width="30" height="30">
                   <span class="ml-3 text-base font-medium text-gray-900">{{ item.name }}</span>
                 </button>
               </div>
@@ -230,18 +196,21 @@ export default {
           {
             name: "Discord",
             description: "Get a better understanding of where your traffic is coming from.",
+            icon: "/assets/images/brands/discord.svg",
             action: () => location.assign("https://discord.gg/xpyuq342nX")
           },
           {
             name: "LINE OpenChat",
             description: "Get a better understanding of where your traffic is coming from.",
-            action: () => location.assign("https://github.com/web-tech-tw/openchat")
+            icon: "/assets/images/brands/line.svg",
+            action: () => location.assign("https://web-tech-tw.github.io/openchat")
           }
         ]
       },
       {
         name: "GitHub",
         type: "function",
+        icon: "/assets/images/brands/github.svg",
         action: () => location.assign("https://github.com/web-tech-tw")
       }
     ],
