@@ -90,9 +90,12 @@
           </div>
         </nav>
         <div class="-mr-2 -my-2 md:hidden">
-          <button aria-expanded="false"
-                  class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                  type="button">
+          <button
+              aria-expanded="false"
+              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              type="button"
+              @click="mobile_menu.status = true"
+          >
             <span class="sr-only">Open menu</span>
             <svg aria-hidden="true" class="h-6 w-6" fill="none" stroke="currentColor"
                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -102,11 +105,16 @@
         </div>
       </div>
     </div>
-    <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+    <div v-show="mobile_menu.status" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
       <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
         <div class="pt-5 pb-6 px-5">
-          <div class="flex items-center justify-between">
-            <div class="ml-auto">
+          <div @click="mobile_menu.status = false" class="flex items-center justify-between">
+            <div>
+              <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
+                Web Tech TW
+              </h1>
+            </div>
+            <div class="-mr-2">
               <button
                   class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                   type="button">
@@ -137,7 +145,6 @@
             </nav>
           </div>
         </div>
-
       </div>
     </div>
     <router-view/>
@@ -171,7 +178,10 @@ export default {
         type: "function",
         action: () => location.assign("https://github.com/web-tech-tw")
       }
-    ]
+    ],
+    mobile_menu: {
+      status: false
+    },
   })
 }
 </script>
