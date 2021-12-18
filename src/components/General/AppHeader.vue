@@ -188,16 +188,10 @@ export default {
   data: () => ({
     menu: [
       {
-        name: "Social Media",
+        name: "交流平台",
         type: "dropdown",
         status: false,
         items: [
-          {
-            name: "Discord",
-            description: "歡迎加入",
-            icon: "/assets/images/brands/discord.svg",
-            action: () => location.assign("https://discord.gg/xpyuq342nX")
-          },
           {
             name: "LINE OpenChat",
             description: "歡迎加入",
@@ -211,6 +205,12 @@ export default {
         type: "function",
         icon: "/assets/images/brands/github.svg",
         action: () => location.assign("https://github.com/web-tech-tw")
+      },
+      {
+        name: "Discord",
+        type: "function",
+        icon: "/assets/images/brands/discord.svg",
+        action: () => location.assign("https://discord.gg/xpyuq342nX")
       }
     ],
     mobile_menu: {
