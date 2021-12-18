@@ -114,6 +114,13 @@
         <p class="mt-3 text-base text-gray-500">
           謝謝你們，因為有你們，我們才能更好
         </p>
+        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-end">
+          <div class="rounded-md shadow">
+            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+              贊助我們
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mt-10 mx-auto py-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
@@ -125,6 +132,13 @@
         <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
           我們正在為大眾提供一個免費且開放的網際網路技術推廣平台，讓大眾可以透過網路，了解網際網路技術，嘗試提升大眾資訊素養，並參與網路技術推廣的討論與分享。
         </p>
+        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          <div class="mt-3 sm:mt-0 sm:ml-3">
+            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+              加入我們
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
