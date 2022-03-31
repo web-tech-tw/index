@@ -194,9 +194,15 @@ export default {
         items: [
           {
             name: "LINE OpenChat",
-            description: "歡迎加入",
+            description: "歡迎加入我們的LINE社群，這裡提供了能在各領域彼此互相切磋、詢問、協助的社群空間",
             icon: require("@/assets/images/brands/line.svg"),
-            action: () => location.assign("https://web-tech-tw.github.io/openchat")
+            action: () => window.open("https://web-tech-tw.github.io/openchat")
+          },
+          {
+            name: "Discord",
+            description: "這裡是我們的Discord伺服器，透過Discord強大的開放API平台，我們嘗試透過機器人使互動更加流暢",
+            icon: require("@/assets/images/brands/discord.svg"),
+            action: () => window.open("https://discord.gg/xpyuq342nX")
           }
         ]
       },
@@ -204,13 +210,13 @@ export default {
         name: "GitHub",
         type: "function",
         icon: require("@/assets/images/brands/github.svg"),
-        action: () => location.assign("https://github.com/web-tech-tw")
+        action: () => window.open("https://github.com/web-tech-tw")
       },
       {
-        name: "Discord",
+        name: "Login",
         type: "function",
         icon: require("@/assets/images/brands/discord.svg"),
-        action: () => location.assign("https://discord.gg/xpyuq342nX")
+        action: () => location.assign("https://web-tech-tw.github.io/sare.inte")
       }
     ],
     mobile_menu: {
