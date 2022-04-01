@@ -200,7 +200,7 @@ export default {
           },
           {
             name: "Discord",
-            description: "這裡是我們的Discord伺服器，透過Discord強大的開放API平台，我們嘗試透過機器人使互動更加流暢",
+            description: "這裡是我們的Discord伺服器，透過Discord強大的開放API平台，使互動變得更加流暢",
             icon: require("@/assets/images/brands/discord.svg"),
             action: () => window.open("https://discord.gg/xpyuq342nX")
           }
@@ -213,7 +213,7 @@ export default {
         action: () => window.open("https://github.com/web-tech-tw")
       },
       {
-        name: "Login",
+        name: "登入",
         type: "function",
         icon: require("@/assets/images/brands/discord.svg"),
         action: () => location.assign("https://web-tech-tw.github.io/sare.inte")

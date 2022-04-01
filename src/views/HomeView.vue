@@ -34,7 +34,7 @@
                 <p class="ml-16 text-lg leading-6 font-medium text-gray-900">推廣JavaScript</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                Unavailable
+                本組織致力於推廣JavaScript程式語言，提升該語言的普及率，並同時以該語言開發各種專案。
               </dd>
             </div>
             <div class="relative">
@@ -47,7 +47,7 @@
                 <p class="ml-16 text-lg leading-6 font-medium text-gray-900">豐富的學習資源</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                Unavailable
+                這裡有各式各樣的文件及相關資源，提供給所需要的人作為參考。
               </dd>
             </div>
             <div class="relative">
@@ -60,7 +60,7 @@
                 <p class="ml-16 text-lg leading-6 font-medium text-gray-900">提供社交媒體交流平台</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                Unavailable
+                我們在許多平台，為大眾提供了溝通管道，讓彼此可以互相交流。
               </dd>
             </div>
             <div class="relative">
@@ -73,7 +73,7 @@
                 <p class="ml-16 text-lg leading-6 font-medium text-gray-900">一切資源全部免費</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                Unavailable
+                我們致力於推廣網際網路技術，同時無償提供大眾免費的學習資源。
               </dd>
             </div>
           </dl>
