@@ -215,7 +215,7 @@ export default {
       {
         name: "登入",
         type: "function",
-        icon: require("@/assets/images/brands/discord.svg"),
+        icon: require("@/assets/images/icons/login.svg"),
         action: () => location.assign("https://web-tech-tw.github.io/sare.inte")
       }
     ],
