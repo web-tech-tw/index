@@ -216,7 +216,7 @@ export default {
         name: "登入",
         type: "function",
         icon: require("@/assets/images/icons/login.svg"),
-        action: () => location.assign("https://web-tech-tw.github.io/sare.inte")
+        action: () => location.assign("https://web-tech-tw.github.io/sara.inte")
       }
     ],
     mobile_menu: {
