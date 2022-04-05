@@ -49,7 +49,7 @@
                         class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 cursor-pointer"
                         @click="child.action"
                     >
-                      <img class="rounded-full" :src="child.icon" :alt="child.name" width="30" height="30">
+                      <img :alt="child.name" :src="child.icon" class="rounded-full" height="30" width="30">
                       <div class="ml-4">
                         <p class="text-base font-medium text-gray-900">
                           {{ child.name }}
@@ -150,7 +150,7 @@
                             class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 cursor-pointer"
                             @click="child.action"
                         >
-                          <img class="rounded-full" :src="child.icon" :alt="child.name" width="30" height="30">
+                          <img :alt="child.name" :src="child.icon" class="rounded-full" height="30" width="30">
                           <div class="ml-4">
                             <p class="text-base font-medium text-gray-900">
                               {{ child.name }}
@@ -170,7 +170,7 @@
                     type="button"
                     @click="item.action"
                 >
-                  <img class="rounded-full" :src="item.icon" :alt="item.name" width="30" height="30">
+                  <img :alt="item.name" :src="item.icon" class="rounded-full" height="30" width="30">
                   <span class="ml-3 text-base font-medium text-gray-900">{{ item.name }}</span>
                 </button>
               </div>
@@ -190,7 +190,8 @@ export default {
   data: () => ({
     menu_collapse: {
       mobile_menu: false,
-      chat_platform: false
+      chat_platform: false,
+      online_service: false
     },
   }),
   computed: {
@@ -221,6 +222,19 @@ export default {
               icon: require("@/assets/images/brands/discord.svg"),
               action: () => window.open("https://discord.gg/xpyuq342nX")
             }
+          ]
+        },
+        {
+          name: "線上服務",
+          type: "dropdown",
+          status: "online_service",
+          items: [
+            {
+              name: "籌備中",
+              description: "還沒準備好...",
+              icon: require("@/assets/images/icons/login.svg"),
+              action: () => null
+            },
           ]
         },
         {
