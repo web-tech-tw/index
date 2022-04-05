@@ -183,45 +183,59 @@
 </template>
 
 <script>
+import jwtDecode from 'jwt-decode';
+
 export default {
   name: 'AppHeader',
   data: () => ({
-    menu: [
-      {
-        name: "交流平台",
-        type: "dropdown",
-        status: false,
-        items: [
-          {
-            name: "LINE OpenChat",
-            description: "歡迎加入我們的LINE社群，這裡提供了能在各領域彼此互相切磋、詢問、協助的社群空間",
-            icon: require("@/assets/images/brands/line.svg"),
-            action: () => window.open("https://web-tech-tw.github.io/openchat")
-          },
-          {
-            name: "Discord",
-            description: "這裡是我們的Discord伺服器，透過Discord強大的開放API平台，使互動變得更加流暢",
-            icon: require("@/assets/images/brands/discord.svg"),
-            action: () => window.open("https://discord.gg/xpyuq342nX")
-          }
-        ]
-      },
-      {
-        name: "GitHub",
-        type: "function",
-        icon: require("@/assets/images/brands/github.svg"),
-        action: () => window.open("https://github.com/web-tech-tw")
-      },
-      {
-        name: "登入",
-        type: "function",
-        icon: require("@/assets/images/icons/login.svg"),
-        action: () => location.assign("https://web-tech-tw.github.io/sara.inte")
-      }
-    ],
     mobile_menu: {
       status: false
     },
-  })
+  }),
+  computed: {
+    isAuthenticated() {
+      const token = localStorage.getItem('unified_token');
+      if (!token) {
+        return false;
+      }
+      const profile = jwtDecode(token);
+      return profile?.user || null;
+    },
+    menu() {
+      return [
+        {
+          name: "交流平台",
+          type: "dropdown",
+          status: false,
+          items: [
+            {
+              name: "LINE OpenChat",
+              description: "歡迎加入我們的LINE社群，這裡提供了能在各領域彼此互相切磋、詢問、協助的社群空間",
+              icon: require("@/assets/images/brands/line.svg"),
+              action: () => window.open("https://web-tech-tw.github.io/openchat")
+            },
+            {
+              name: "Discord",
+              description: "這裡是我們的Discord伺服器，透過Discord強大的開放API平台，使互動變得更加流暢",
+              icon: require("@/assets/images/brands/discord.svg"),
+              action: () => window.open("https://discord.gg/xpyuq342nX")
+            }
+          ]
+        },
+        {
+          name: "GitHub",
+          type: "function",
+          icon: require("@/assets/images/brands/github.svg"),
+          action: () => window.open("https://github.com/web-tech-tw")
+        },
+        {
+          name: this.isAuthenticated?.nickname || "登入",
+          type: "function",
+          icon: require(`@/assets/images/icons/${this.isAuthenticated ? 'user' : 'login'}.svg`),
+          action: () => location.assign("https://web-tech-tw.github.io/sara.inte")
+        }
+      ]
+    }
+  }
 }
 </script>

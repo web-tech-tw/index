@@ -159,7 +159,6 @@ export default {
       const text = "Hello world\n早安，世界。\n一個致力於網際網路發展的組織。臺灣網際網路技術推廣組織";
       const content_fields = Object.keys(this.first_block)
       let field_counter = 0
-      console.log(content_fields)
       for (const i in text) {
         if (text[i] === "\n") {
           field_counter++;
