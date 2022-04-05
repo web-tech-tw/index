@@ -19,7 +19,7 @@
                   aria-expanded="false"
                   class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   type="button"
-                  @click="item.status = !item.status"
+                  @click="menu_collapse[item.status] = !menu_collapse[item.status]"
               >
                 <span>{{ item.name }}</span>
                 <svg
@@ -39,7 +39,7 @@
               <div
                   class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                 <div
-                    v-show="item.status"
+                    v-show="menu_collapse[item.status]"
                     class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
                 >
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -79,7 +79,7 @@
               aria-expanded="false"
               class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               type="button"
-              @click="mobile_menu.status = true"
+              @click="menu_collapse.mobile_menu = true"
           >
             <span class="sr-only">Open menu</span>
             <svg aria-hidden="true" class="h-6 w-6" fill="none" stroke="currentColor"
@@ -90,11 +90,11 @@
         </div>
       </div>
     </div>
-    <div v-show="mobile_menu.status"
+    <div v-show="menu_collapse.mobile_menu"
          class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
       <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
         <div class="pt-5 pb-6 px-5">
-          <div class="flex items-center justify-between" @click="mobile_menu.status = false">
+          <div class="flex items-center justify-between" @click="menu_collapse.mobile_menu = false">
             <div>
               <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
                 Web Tech TW
@@ -120,7 +120,7 @@
                       aria-expanded="false"
                       class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full"
                       type="button"
-                      @click="item.status = !item.status"
+                      @click="menu_collapse[item.status] = !menu_collapse[item.status]"
                   >
                     <span>{{ item.name }}</span>
                     <svg
@@ -140,7 +140,7 @@
                   <div
                       class="absolute z-10 -ml-7 mt-3 transform px-2 w-screen max-w-md sm:px-0 sm:-ml-4 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                     <div
-                        v-show="item.status"
+                        v-show="menu_collapse[item.status]"
                         class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
                     >
                       <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -188,8 +188,9 @@ import jwtDecode from 'jwt-decode';
 export default {
   name: 'AppHeader',
   data: () => ({
-    mobile_menu: {
-      status: false
+    menu_collapse: {
+      mobile_menu: false,
+      chat_platform: false
     },
   }),
   computed: {
@@ -206,7 +207,7 @@ export default {
         {
           name: "交流平台",
           type: "dropdown",
-          status: false,
+          status: "chat_platform",
           items: [
             {
               name: "LINE OpenChat",
