@@ -195,7 +195,7 @@ export default {
     },
   }),
   computed: {
-    isAuthenticated() {
+    profile() {
       const token = localStorage.getItem('unified_token');
       if (!token) {
         return false;
@@ -244,9 +244,9 @@ export default {
           action: () => window.open("https://github.com/web-tech-tw")
         },
         {
-          name: this.isAuthenticated?.nickname || "登入",
+          name: this.profile?.nickname || "登入",
           type: "function",
-          icon: require(`@/assets/images/icons/${this.isAuthenticated ? 'user' : 'login'}.svg`),
+          icon: require(`@/assets/images/icons/${this.profile ? 'user' : 'login'}.svg`),
           action: () => location.assign("https://web-tech-tw.github.io/sara.inte")
         }
       ]

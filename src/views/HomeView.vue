@@ -146,7 +146,7 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'HomeView',
   data: () => ({
     first_block: {
       title: "",
