@@ -34,7 +34,7 @@
                 <p class="ml-16 text-lg leading-6 font-medium text-gray-900">推廣JavaScript</p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
-                本組織致力於推廣JavaScript程式語言，提升該語言的普及率，並同時以該語言開發各種專案。
+                本組織致力於推廣 JavaScript 程式語言，提升該語言的普及率，並同時以該語言開發各種專案。
               </dd>
             </div>
             <div class="relative">
@@ -156,7 +156,7 @@ export default {
   }),
   methods: {
     firstBlock() {
-      const text = "Hello world\n早安，世界。\n一個致力於網際網路發展的組織。臺灣網際網路技術推廣組織";
+      const text = "Hello World\n早安，世界。\n一個致力於網際網路發展的組織。臺灣網際網路技術推廣組織";
       const content_fields = Object.keys(this.first_block)
       let field_counter = 0
       for (const i in text) {

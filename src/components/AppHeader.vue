@@ -19,7 +19,7 @@
                   aria-expanded="false"
                   class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   type="button"
-                  @click="menu_collapse[item.status] = !menu_collapse[item.status]"
+                  @click="openMenu(item.status)"
               >
                 <span>{{ item.name }}</span>
                 <svg
@@ -90,7 +90,8 @@
         </div>
       </div>
     </div>
-    <div v-show="menu_collapse.mobile_menu"
+    <div 
+         v-show="menu_collapse.mobile_menu"
          class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
       <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
         <div class="pt-5 pb-6 px-5">
@@ -120,7 +121,7 @@
                       aria-expanded="false"
                       class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full"
                       type="button"
-                      @click="menu_collapse[item.status] = !menu_collapse[item.status]"
+                      @click="openMenu(item.status)"
                   >
                     <span>{{ item.name }}</span>
                     <svg
@@ -212,13 +213,13 @@ export default {
           items: [
             {
               name: "LINE OpenChat",
-              description: "歡迎加入我們的LINE社群，這裡提供了能在各領域彼此互相切磋、詢問、協助的社群空間",
+              description: "歡迎加入我們的 LINE 社群，這裡提供了能在各領域彼此互相切磋、詢問、協助的社群空間",
               icon: require("@/assets/images/brands/line.svg"),
               action: () => window.open("https://web-tech-tw.github.io/openchat")
             },
             {
               name: "Discord",
-              description: "這裡是我們的Discord伺服器，透過Discord強大的開放API平台，使互動變得更加流暢",
+              description: "這裡是我們的 Discord 伺服器，透過 Discord 強大的開放 API 平台，使互動變得更加流暢",
               icon: require("@/assets/images/brands/discord.svg"),
               action: () => window.open("https://discord.gg/xpyuq342nX")
             }
@@ -250,6 +251,28 @@ export default {
           action: () => location.assign("https://web-tech-tw.github.io/sara.inte")
         }
       ]
+    }
+  },
+  created() {
+    document.addEventListener('click', this.handleDocumentClick);
+  },
+  methods: {
+    openMenu(item) {
+      Object.keys(this.menu_collapse).forEach(key => {
+        if (key === 'mobile_menu') return
+        if (key === item ) {
+          this.menu_collapse[key] = !this.menu_collapse[key];
+        } else {
+          this.menu_collapse[key] = false;
+        }
+      });
+    },
+    handleDocumentClick(e) {
+      if (!this.$el.contains(e.target)) {
+        Object.keys(this.menu_collapse).forEach(key => {
+          this.menu_collapse[key] = false;
+        });        
+      }
     }
   }
 }
