@@ -183,8 +183,6 @@
 </template>
 
 <script>
-import jwtDecode from 'jwt-decode';
-
 export default {
   name: 'AppHeader',
   data: () => ({
@@ -193,16 +191,9 @@ export default {
       chat_platform: false,
       online_service: false
     },
+    profile: null
   }),
   computed: {
-    profile() {
-      const token = localStorage.getItem('unified_token');
-      if (!token) {
-        return false;
-      }
-      const profile = jwtDecode(token);
-      return profile?.user || null;
-    },
     menu() {
       return [
         {
@@ -251,6 +242,9 @@ export default {
         }
       ]
     }
-  }
+  },
+  async created() {
+    this.profile = await this.$profile();
+  },
 }
 </script>
