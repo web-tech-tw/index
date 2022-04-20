@@ -12,13 +12,13 @@ const extension = {
             try {
                 options.headers.Authorization = `SARA ${token}`;
                 const xhr = await axios.get('profile', options);
-                return xhr?.data?.profile || null;
+                return xhr?.data?.profile || false;
             } catch (e) {
                 if (e?.response?.status === 401) {
                     localStorage.removeItem(process.env.VUE_APP_SARA_TOKEN_NAME);
                     location.reload();
                 }
-                return null;
+                return false;
             }
         }
     }
