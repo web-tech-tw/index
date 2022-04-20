@@ -247,7 +247,7 @@ export default {
           name: this.profile?.nickname || "登入",
           type: "function",
           icon: require(`@/assets/images/icons/${this.profile ? 'user' : 'login'}.svg`),
-          action: () => location.assign("https://web-tech-tw.github.io/sara.inte")
+          action: () => location.assign(process.env.VUE_APP_SARA_INTE_HOST)
         }
       ]
     }
