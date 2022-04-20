@@ -184,8 +184,6 @@
 </template>
 
 <script>
-import jwtDecode from 'jwt-decode';
-
 export default {
   name: 'AppHeader',
   data: () => ({
@@ -194,16 +192,9 @@ export default {
       chat_platform: false,
       online_service: false
     },
+    profile: null
   }),
   computed: {
-    profile() {
-      const token = localStorage.getItem('unified_token');
-      if (!token) {
-        return false;
-      }
-      const profile = jwtDecode(token);
-      return profile?.user || null;
-    },
     menu() {
       return [
         {
@@ -248,13 +239,14 @@ export default {
           name: this.profile?.nickname || "登入",
           type: "function",
           icon: require(`@/assets/images/icons/${this.profile ? 'user' : 'login'}.svg`),
-          action: () => location.assign("https://web-tech-tw.github.io/sara.inte")
+          action: () => location.assign(process.env.VUE_APP_SARA_INTE_HOST)
         }
       ]
     }
   },
-  created() {
+  async created() {
     document.addEventListener('click', this.handleDocumentClick);
+    this.profile = await this.$profile();
   },
   methods: {
     openMenu(item) {
