@@ -6,13 +6,18 @@
           <div class="lg:flex-none lg:w-1/2">
             <h2 class="font-semibold text-gray-900">組織資訊</h2>
             <ul class="mt-3 space-y-2">
-              <li><a class="hover:text-gray-900" href="#">尚未提供</a></li>
+              <li><a class="hover:text-gray-900" href="#">核心成員</a></li>
+              <li><a class="hover:text-gray-900" href="#">財務報表</a></li>
+              <li><a class="hover:text-gray-900" href="#">關於組織</a></li>
             </ul>
           </div>
           <div class="lg:flex-none lg:w-1/2">
             <h2 class="font-semibold text-gray-900">學習資源</h2>
             <ul class="mt-3 space-y-2">
-              <li><a class="hover:text-gray-900" href="#">尚未提供</a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="#">為什麼我要更新瀏覽器呢？</a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="#">網際網路基礎觀念</a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="https://ncurl.xyz/s/b0AIBYTnR">JavaScript 基礎教學（MDN）</a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="#">網際網路後端伺服器開發基礎（Express.js）</a></li>
             </ul>
           </div>
         </div>
@@ -20,13 +25,17 @@
           <div class="lg:flex-none lg:w-1/2">
             <h2 class="font-semibold text-gray-900">就業資源</h2>
             <ul class="mt-3 space-y-2">
-              <li><a class="hover:text-gray-900" href="#">尚未提供</a></li>
+              <li><a class="hover:text-gray-900" href="#">徵才平台</a></li>
+              <li><a class="hover:text-gray-900" href="#">求職平台</a></li>
+              <li><a class="hover:text-gray-900" href="#">職場討論</a></li>
             </ul>
           </div>
           <div class="lg:flex-none lg:w-1/2">
-            <h2 class="font-semibold text-gray-900">社交媒體</h2>
+            <h2 class="font-semibold text-gray-900">產品列表</h2>
             <ul class="mt-3 space-y-2">
-              <li><a class="hover:text-gray-900" href="#">尚未提供</a></li>
+              <li><a class="hover:text-gray-900" href="#">Swollen</a></li>
+              <li><a class="hover:text-gray-900" href="#">Sara 系統</a></li>
+              <li><a class="hover:text-gray-900" href="#">更多產品</a></li>
             </ul>
           </div>
         </div>
