@@ -111,6 +111,15 @@
           <span class="block text-indigo-600 xl:inline">贊助方</span>
           <span class="block xl:inline">所支持</span>
         </h1>
+        <button
+            v-for="(i, j) in sponsors"
+            class="flex w-full mt-3 sm:justify-center lg:justify-end"
+            :key="j"
+            :title="i.name"
+            @click="goUrl(i.website)"
+        >
+          <img class="h-6 w-6" :src="i.icon" :alt="i.name" />
+        </button>
         <p class="mt-3 text-base text-gray-500">
           謝謝你們，因為有你們，我們才能更好
         </p>
@@ -152,7 +161,14 @@ export default {
       title: "",
       subtitle: "",
       description: ""
-    }
+    },
+    sponsors: [
+        {
+          name: "Star Inc.",
+          website: "https://starinc.xyz",
+          icon: require('@/assets/images/icons/star.svg')
+        }
+    ]
   }),
   methods: {
     firstBlock() {
@@ -169,6 +185,9 @@ export default {
           this.first_block[field_name] += text[i]
         }, i * 30)
       }
+    },
+    goUrl(url) {
+      window.open(url);
     }
   },
   mounted() {
