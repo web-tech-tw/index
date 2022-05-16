@@ -212,7 +212,7 @@ export default {
               name: "Discord",
               description: "這裡是我們的 Discord 伺服器，透過 Discord 強大的開放 API 平台，使互動變得更加流暢",
               icon: require("@/assets/images/brands/discord.svg"),
-              action: () => window.open("https://discord.gg/xpyuq342nX")
+              action: () => window.open("https://discord.gg/nM7ub6Dz5J")
             }
           ]
         },
