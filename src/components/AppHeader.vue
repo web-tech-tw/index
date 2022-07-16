@@ -5,10 +5,10 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <router-link to="/">
             <h1 class="flex-auto text-lg font-semibold text-gray-900 hidden sm:block">
-              Taiwan Web Technology Promotion Organization
+              {{ title.long }}
             </h1>
             <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
-              Web Tech TW
+              {{ title.short }}
             </h1>
           </router-link>
         </div>
@@ -98,7 +98,7 @@
           <div class="flex items-center justify-between" @click="menu_collapse.mobile_menu = false">
             <div>
               <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
-                Web Tech TW
+                {{ title.short }}
               </h1>
             </div>
             <div class="-mr-2">
@@ -126,7 +126,7 @@
                     <span>{{ item.name }}</span>
                     <svg
                         aria-hidden="true"
-                        class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500 ml-auto"
+                        class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -187,6 +187,10 @@
 export default {
   name: 'AppHeader',
   data: () => ({
+    title: {
+      short: "Web Tech TW",
+      long: "Taiwan Web Technology Promotion Organization"
+    },
     menu_collapse: {
       mobile_menu: false,
       chat_platform: false,
@@ -222,10 +226,10 @@ export default {
           status: "online_service",
           items: [
             {
-              name: "籌備中",
-              description: "還沒準備好...",
-              icon: require("@/assets/images/icons/login.svg"),
-              action: () => null
+              name: "Chew 口香糖",
+              description: "文字片段分享平台",
+              icon: require("@/assets/images/icons/clipboard.svg"),
+              action: () => window.open("https://web-tech-tw.github.io/chew.inte")
             },
           ]
         },
