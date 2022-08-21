@@ -231,6 +231,12 @@ export default {
               icon: require("@/assets/images/icons/clipboard.svg"),
               action: () => window.open("https://web-tech-tw.github.io/chew.inte")
             },
+            {
+              name: "Lucid",
+              description: "基於純網頁運行的 SliTaz Linux x86-compatible 虛擬電腦",
+              icon: require("@/assets/images/icons/lightning-bolt.svg"),
+              action: () => window.open("https://web-tech-tw.github.io/lucid.inte")
+            },
           ]
         },
         {
