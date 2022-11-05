@@ -233,7 +233,7 @@ export default {
             },
             {
               name: "Lucid",
-              description: "基於純網頁運行的 SliTaz Linux x86-compatible 虛擬電腦",
+              description: "基於純網頁運行的 SliTaz/xPUD Linux x86-compatible 虛擬電腦",
               icon: require("@/assets/images/icons/lightning-bolt.svg"),
               action: () => window.open("https://web-tech-tw.github.io/lucid.inte")
             },
