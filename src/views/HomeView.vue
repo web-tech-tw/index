@@ -16,7 +16,7 @@
         <div class="lg:text-center">
           <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">我們的使命</h2>
           <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            讓世界看見台灣的資訊力
+            讓世界的資訊力
           </p>
           <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             提供多樣化資訊產業資源，普及大眾資訊素養及資訊能力
