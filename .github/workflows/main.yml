@@ -20,7 +20,6 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          npm run generate-chats-qr
           npm run build
 
       - name: Deploy 🚀
