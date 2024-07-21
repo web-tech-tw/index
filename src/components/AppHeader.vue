@@ -229,13 +229,13 @@ export default {
               name: "Chew 口香糖",
               description: "文字片段分享平台",
               icon: require("@/assets/images/icons/clipboard.svg"),
-              action: () => window.open("https://web-tech-tw.github.io/chew.inte")
+              action: () => window.open("https://web-tech-tw.github.io/chew")
             },
             {
               name: "Lucid",
               description: "基於純網頁運行的 SliTaz/xPUD Linux x86-compatible 虛擬電腦",
               icon: require("@/assets/images/icons/lightning-bolt.svg"),
-              action: () => window.open("https://web-tech-tw.github.io/lucid.inte")
+              action: () => window.open("https://web-tech-tw.github.io/lucid")
             },
           ]
         },
