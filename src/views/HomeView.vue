@@ -101,7 +101,7 @@
         </p>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div class="rounded-md shadow">
-            <a href="https://ncurl.xyz/s/RkyRGBRHg"
+            <a href="/openchat"
               class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
               LINE 社群
             </a>
@@ -123,16 +123,14 @@
           <span class="block xl:inline">普及教育</span>
         </h1>
         <div class="mt-3 text-base text-gray-500">
-          <div v-for="(i, j) in aiMessages" :key="j">
-            <span v-if="i.role == 'user'" class="text-indigo-500">
-              {{ i.content }}
-            </span>
-            <span v-else-if="i.role == 'assistant'">
-              {{ i.content }}
-            </span>
+          <div class="text-indigo-500">
+            {{ aiBanner.question }}
           </div>
-          <div v-show="aiMessages.length < 3">
+          <div v-if="aiBanner.answer === ''">
             <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-indigo-400 opacity-75"></span>
+          </div>
+          <div v-else>
+            {{ aiBanner.answer }}
           </div>
         </div>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-end">
@@ -182,6 +180,10 @@ export default {
       subtitle: "",
       description: "",
     },
+    aiBanner: {
+      question: "嗨！請用一句話簡介你自己。",
+      answer: "",
+    },
     aiMessages: [{
       "role": "system",
       "content": aiSystemPrompt,
@@ -206,15 +208,11 @@ export default {
     meeting() {
       this.askAi(
         this.aiMessages,
-        "嗨！請用一句話簡介你自己。",
+        this.aiBanner.question,
       ).then((message) => {
-        const index = this.aiMessages.push({
-          "role": "assistant",
-          "content": "",
-        });
         this.typing(
-          this.aiMessages[index - 1],
-          "content",
+          this.aiBanner,
+          "answer",
           message.content,
         )
       });

@@ -210,7 +210,7 @@ export default {
               name: "LINE OpenChat",
               description: "歡迎加入我們的 LINE 社群，這裡提供了能在各領域彼此互相切磋、詢問、協助的社群空間",
               icon: require("@/assets/images/brands/line.svg"),
-              action: () => window.open("https://ncurl.xyz/s/RkyRGBRHg")
+              action: () => window.open("/openchat")
             },
             {
               name: "Discord",
@@ -229,13 +229,13 @@ export default {
               name: "Chew 口香糖",
               description: "文字片段分享平台",
               icon: require("@/assets/images/icons/clipboard.svg"),
-              action: () => window.open("https://web-tech-tw.github.io/chew")
+              action: () => window.open("/chew")
             },
             {
               name: "Lucid",
               description: "基於純網頁運行的 SliTaz/xPUD Linux x86-compatible 虛擬電腦",
               icon: require("@/assets/images/icons/lightning-bolt.svg"),
-              action: () => window.open("https://web-tech-tw.github.io/lucid")
+              action: () => window.open("/lucid")
             },
           ]
         },
