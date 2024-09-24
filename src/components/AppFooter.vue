@@ -33,10 +33,18 @@
           <div class="lg:flex-none lg:w-1/2">
             <h2 class="font-semibold text-gray-900">學習資源</h2>
             <ul class="mt-3 space-y-2">
-              <li><a class="hover:text-gray-900" target="_blank" href="/wiki/#/browser">為什麼我要更新瀏覽器呢？</a></li>
-              <li><a class="hover:text-gray-900" target="_blank" href="/wiki/#/internet">網際網路基礎觀念</a></li>
-              <li><a class="hover:text-gray-900" target="_blank" href="/wiki/#/javascript">JavaScript 基礎教學（MDN）</a></li>
-              <li><a class="hover:text-gray-900" target="_blank" href="/wiki/#/express.js">網際網路後端伺服器開發基礎（Express.js）</a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="https://ncurl.xyz/s/zkF8zBgNg">
+                為什麼我要更新瀏覽器呢？
+              </a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="https://ncurl.xyz/s/Eg2QzfgNg">
+                網際網路基礎觀念
+              </a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="https://ncurl.xyz/s/b0AIBYTnR">
+                JavaScript 基礎教學（MDN）
+              </a></li>
+              <li><a class="hover:text-gray-900" target="_blank" href="https://ncurl.xyz/s/Wgy1zfgNg">
+                網際網路後端伺服器開發基礎（Express.js）
+              </a></li>
             </ul>
           </div>
         </div>
