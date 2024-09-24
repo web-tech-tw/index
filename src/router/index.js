@@ -11,11 +11,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/',
-    name: 'home',
-    component: Home
-  },
-  {
     path: '/privacy',
     name: 'privacy',
     component: () => import('../views/PrivacyView.vue'),
@@ -29,7 +24,10 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  routes
+  scrollBehavior() {
+    return { y: 0 }
+  },
+  routes,
 });
 
 export default router;

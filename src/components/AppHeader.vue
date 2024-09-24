@@ -210,7 +210,7 @@ export default {
               name: "LINE OpenChat",
               description: "歡迎加入我們的 LINE 社群，這裡提供了能在各領域彼此互相切磋、詢問、協助的社群空間",
               icon: require("@/assets/images/brands/line.svg"),
-              action: () => window.open("https://web-tech-tw.github.io/openchat")
+              action: () => window.open("https://ncurl.xyz/s/RkyRGBRHg")
             },
             {
               name: "Discord",
