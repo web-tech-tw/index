@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="max-w-7xl mx-auto mt-11 divide-y divide-gray-200 px-4 sm:px-6 md:px-8 text-sky-700">
-      <a class="mr-3" href="https://github.com/web-tech-tw/web-tech-tw.github.io">網站原始碼</a>
+      <a class="mr-3" href="https://github.com/web-tech-tw/index">網站原始碼</a>
       <router-link class="mr-3" to="/privacy">隱私權政策</router-link>
     </div>
     <div class="max-w-7xl mx-auto mt-5 divide-y divide-gray-200 px-4 sm:px-6 md:px-8">

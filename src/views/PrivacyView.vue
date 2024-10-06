@@ -106,7 +106,7 @@
       <div class="paragraph">
         <p>
           如果您對本隱私政策有任何疑問，請與我們聯繫：<br>
-          訪問我們網站上的<a href="https://web-tech-tw.github.io">這個頁面</a>以取得聯絡方式。
+          訪問我們網站上的<a href="https://web-tech.tw">這個頁面</a>以取得聯絡方式。
         </p>
       </div>
     </div>
