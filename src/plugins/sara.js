@@ -72,16 +72,15 @@ const getProfile = async () => {
 
 const extension = {
     install: (Vue) => {
-        Vue.sara = axiosClient;
-        Vue.profile = getProfile;
         window.sara = axiosClient;
+        Vue.sara = axiosClient;
+        Vue.prototype.sara = axiosClient;
+        Vue.prototype.$sara = axiosClient;
+
         window.profile = getProfile;
-        Object.defineProperties(Vue.prototype, {
-            sara: axiosClient,
-            $sara: axiosClient,
-            profile: getProfile,
-            $profile: getProfile,
-        });
+        Vue.profile = getProfile;
+        Vue.prototype.profile = getProfile;
+        Vue.prototype.$profile = getProfile;
     },
 };
 

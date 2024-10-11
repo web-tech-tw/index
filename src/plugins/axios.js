@@ -32,12 +32,10 @@ axiosClient.interceptors.response.use(
 
 const extension = {
     install: (Vue) => {
-        Vue.axios = axiosClient;
         window.axios = axiosClient;
-        Object.defineProperties(Vue.prototype, {
-            axios: axiosClient,
-            $axios: axiosClient,
-        });
+        Vue.axios = axiosClient;
+        Vue.prototype.axios = axiosClient;
+        Vue.prototype.$axios = axiosClient;
     },
 };
 
