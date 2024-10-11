@@ -51,7 +51,7 @@ axiosClient.interceptors.response.use(
 );
 
 const getProfile = async () => {
-    if (!localStorage.hasItem(saraTokenName)) {
+    if (!localStorage.getItem(saraTokenName)) {
         return null;
     }
 
