@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import './plugins/sara'
 import './plugins/axios'
+import './plugins/profile'
 import App from './App.vue'
 import './assets/tailwind.css'
 import router from './router'
