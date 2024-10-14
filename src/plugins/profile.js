@@ -15,13 +15,12 @@ const getProfile = async () => {
 
     try {
         const data = jwtDecode(saraToken);
+        if (Date.now() >= data.exp * 1000) {
+            throw new Error("sara token expired");
+        }
         return data?.user || false;
     } catch (e) {
-        if (e?.response?.status !== 401) {
-            console.warn(e);
-            return null;
-        }
-
+        console.warn(e);
         localStorage.removeItem(saraTokenName);
         location.reload();
         return null;
