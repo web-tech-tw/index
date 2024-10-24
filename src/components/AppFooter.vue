@@ -6,9 +6,9 @@
           <div class="lg:flex-none lg:w-1/2">
             <h2 class="font-semibold text-gray-900">組織資訊</h2>
             <ul class="mt-3 space-y-2">
-              <li><router-link class="hover:text-gray-900" to="/core-team">核心成員</router-link></li>
-              <li><router-link class="hover:text-gray-900" to="/financial">財務報表</router-link></li>
-              <li><router-link class="hover:text-gray-900" to="/about">關於組織</router-link></li>
+              <li><router-link class="hover:text-gray-900" to="/about">關於我們</router-link></li>
+              <li><router-link class="hover:text-gray-900" to="/contact">聯絡我們</router-link></li>
+              <li><router-link class="hover:text-gray-900" to="/status">系統資訊</router-link></li>
             </ul>
           </div>
           <div class="lg:flex-none lg:w-1/2">

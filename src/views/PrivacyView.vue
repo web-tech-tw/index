@@ -1,6 +1,6 @@
 <template>
   <div class="my-9 flex justify-center mx-5">
-    <div class="prose lg:prose-xl">
+    <div class="prose">
       <h1>隱私權政策</h1>
       <p>
         啟用日期：2022年4月8日<br>

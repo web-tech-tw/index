@@ -10,6 +10,9 @@
             <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
               {{ title.short }}
             </h1>
+            <p class="flex-auto text-md font-normal text-gray-500 hidden sm:block">
+              {{ subtitle.long }}
+            </p>
           </router-link>
         </div>
         <nav class="md:flex space-x-10 hidden">
@@ -190,6 +193,9 @@ export default {
     title: {
       short: "Web Tech TW",
       long: "Taiwan Web Technology Promotion Organization"
+    },
+    subtitle: {
+      long: "臺灣網際網路技術推廣組織"
     },
     menu_collapse: {
       mobile_menu: false,

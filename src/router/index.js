@@ -11,6 +11,21 @@ const routes = [
     component: Home
   },
   {
+    path: '/status',
+    name: 'status',
+    component: () => import('../views/StatusView.vue'),
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/ContactView.vue'),
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/AboutView.vue'),
+  },
+  {
     path: '/privacy',
     name: 'privacy',
     component: () => import('../views/PrivacyView.vue'),
