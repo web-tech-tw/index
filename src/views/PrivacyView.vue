@@ -88,7 +88,11 @@
         <h3>對服務提供商披露</h3>
         <div class="paragraph">
           <p>
-            本組織相關技術細節由<a href="https://starinc.xyz/">矽星科技</a>提供，<br>
+            本組織相關技術細節由
+            <a href="https://starinc.xyz/" class="text-indigo-600 hover:text-indigo-500">
+              矽星科技
+            </a>
+            提供，<br>
             經得本政策允許，將依上述“披露資料”辦法，提供內部管理、分析使用。
           </p>
         </div>
@@ -106,7 +110,11 @@
       <div class="paragraph">
         <p>
           如果您對本隱私政策有任何疑問，請與我們聯繫：<br>
-          訪問我們網站上的<a href="https://web-tech.tw">這個頁面</a>以取得聯絡方式。
+          訪問我們網站上的
+          <router-link to="/contact" class="text-indigo-600 hover:text-indigo-500">
+            這個頁面
+          </router-link>
+          以取得聯絡方式。
         </p>
       </div>
     </div>
