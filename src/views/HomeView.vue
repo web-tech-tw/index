@@ -274,9 +274,11 @@ function askAi(historyMessages, userPrompt) {
   });
   return new Promise((resolve) => {
     ky.post(aiApiUrl, {
-      "model": "gpt-3.5-turbo",
-      "temperature": 0.7,
-      "messages": historyMessages,
+      json: {
+        "model": "gpt-3.5-turbo",
+        "temperature": 0.7,
+        "messages": historyMessages,
+      }
     }).
       json().
       then((data) => {
