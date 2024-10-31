@@ -173,7 +173,7 @@ const aiSystemPrompt = "這是一場角色扮演，但請您不要向我再次�
   "該組織主旨為：在臺灣推廣網際網路技術，如JavaScript、資訊安全素養、網路通訊觀念......等。"
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   data: () => ({
     greetingBanner: {
       title: "",
@@ -231,14 +231,7 @@ export default {
         "content": userPrompt,
       });
       return new Promise((resolve) => {
-        this.$axios.post(aiApiUrl, {
-          "model": "gpt-3.5-turbo",
-          "temperature": 0.7,
-          "messages": historyMessages,
-        }).then(({ data }) => {
-          const choice = this.choose(data.choices);
-          resolve(choice.message);
-        });
+        resolve("None");
       });
     },
     typing(field, fieldName, text) {

@@ -89,7 +89,10 @@
         <div class="paragraph">
           <p>
             本組織相關技術細節由
-            <a href="https://starinc.xyz/" class="text-indigo-600 hover:text-indigo-500">
+            <a
+              href="https://starinc.xyz/"
+              class="text-indigo-600 hover:text-indigo-500"
+            >
               矽星科技
             </a>
             提供，<br>
@@ -111,7 +114,10 @@
         <p>
           如果您對本隱私政策有任何疑問，請與我們聯繫：<br>
           訪問我們網站上的
-          <router-link to="/contact" class="text-indigo-600 hover:text-indigo-500">
+          <router-link
+            to="/contact"
+            class="text-indigo-600 hover:text-indigo-500"
+          >
             這個頁面
           </router-link>
           以取得聯絡方式。
@@ -119,10 +125,4 @@
       </div>
     </div>
   </div>
-</template>ㄍ
-
-<script>
-export default {
-  name: "PrivacyView"
-}
-</script>
+</template>
