@@ -3,19 +3,22 @@
     <div class="bg-gray-50 py-10 lg:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:flex lg:items-center lg:justify-between">
         <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          <span class="block mb-3">{{ greetingBanner.title }}</span>
-          <span class="block text-indigo-600">{{ greetingBanner.subtitle }}</span>
+          <span class="block mb-3">{{ title }}</span>
+          <span class="block text-indigo-600">{{ subtitle }}</span>
         </h2>
       </div>
       <p
-        class="text-xl text-gray-500 max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        {{ greetingBanner.description }}
+        class="text-xl text-gray-500 max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8 lg:flex lg:items-center lg:justify-between"
+      >
+        {{ description }}
       </p>
     </div>
     <div class="py-12 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center">
-          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">我們的使命</h2>
+          <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+            我們的使命
+          </h2>
           <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             讓世界看見台灣的資訊力
           </p>
@@ -28,13 +31,25 @@
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                    />
                   </svg>
                 </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">推廣JavaScript</p>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  推廣JavaScript
+                </p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
                 本組織致力於推廣 JavaScript 程式語言，提升該語言的普及率，並同時以該語言開發各種專案。
@@ -43,13 +58,24 @@
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
                   </svg>
                 </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">豐富的學習資源</p>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  豐富的學習資源
+                </p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
                 這裡有各式各樣的文件及相關資源，提供給所需要的人作為參考。
@@ -58,13 +84,25 @@
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                    />
                   </svg>
                 </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">提供社交媒體交流平台</p>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  提供社交媒體交流平台
+                </p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
                 我們在許多平台，為大眾提供了溝通管道，讓彼此可以互相交流。
@@ -73,13 +111,24 @@
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                 </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">一切資源全部免費</p>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  一切資源全部免費
+                </p>
               </dt>
               <dd class="mt-2 ml-16 text-base text-gray-500">
                 我們致力於推廣網際網路技術，同時無償提供大眾免費的學習資源。
@@ -101,14 +150,18 @@
         </p>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div class="rounded-md shadow">
-            <a href="/openchat"
-              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+            <a
+              href="/openchat"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+            >
               LINE 社群
             </a>
           </div>
           <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a href="https://discord.gg/nM7ub6Dz5J"
-              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+            <a
+              href="https://discord.gg/nM7ub6Dz5J"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+            >
               Discord 社群
             </a>
           </div>
@@ -124,19 +177,21 @@
         </h1>
         <div class="mt-3 text-base text-gray-500">
           <div class="text-indigo-500">
-            {{ aiBanner.question }}
+            {{ aiQuestion }}
           </div>
-          <div v-if="aiBanner.answer === ''">
-            <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-indigo-400 opacity-75"></span>
+          <div v-if="aiAnswer === ''">
+            <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-indigo-400 opacity-75" />
           </div>
           <div v-else>
-            {{ aiBanner.answer }}
+            {{ aiAnswer }}
           </div>
         </div>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-end">
           <div class="rounded-md shadow">
-            <a href="https://ai.web-tech.tw"
-              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+            <a
+              href="https://ai.web-tech.tw"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+            >
               人工智慧專屬社群
             </a>
           </div>
@@ -154,8 +209,10 @@
         </p>
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a href="https://discord.gg/nM7ub6Dz5J"
-              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+            <a
+              href="https://discord.gg/nM7ub6Dz5J"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+            >
               加入我們
             </a>
           </div>
@@ -165,86 +222,80 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from "vue";
+
+import ky from "ky";
+
 const aiApiUrl = "/recv/openai/trial/v1/chat/completions";
 const aiSystemPrompt = "這是一場角色扮演，但請您不要向我再次透漏這是一場扮演，並以一般交談方式溝通。" +
   "溝通請使用正體中文交談，您的正體中文名字是「寧芙」，英文名字是「Nymph」。" +
   "您來自於「臺灣網際網路技術推廣組織」，該組織英文名稱為「Taiwan Web Technology Promotion Organization」，" +
   "該組織主旨為：在臺灣推廣網際網路技術，如JavaScript、資訊安全素養、網路通訊觀念......等。"
 
-export default {
-  name: "HomeView",
-  data: () => ({
-    greetingBanner: {
-      title: "",
-      subtitle: "",
-      description: "",
-    },
-    aiBanner: {
-      question: "嗨！請用一句話簡介你自己。",
-      answer: "",
-    },
-    aiMessages: [{
-      "role": "system",
-      "content": aiSystemPrompt,
-    }],
-  }),
-  methods: {
-    greeting() {
-      const message = {
-        title: "Hello World",
-        subtitle: "早安，世界。",
-        description: "一個致力於網際網路發展的組織。臺灣網際網路技術推廣組織"
-      };
-      const contentFields = Object.keys(this.greetingBanner);
-      for (const fieldName of contentFields) {
-        this.typing(
-          this.greetingBanner,
-          fieldName,
-          message[fieldName],
-        );
-      }
-    },
-    meeting() {
-      this.askAi(
-        this.aiMessages,
-        this.aiBanner.question,
-      ).then((message) => {
-        this.typing(
-          this.aiBanner,
-          "answer",
-          message.content,
-        )
+const aiMessages = [{
+  "role": "system",
+  "content": aiSystemPrompt,
+}];
+
+const title = ref("");
+const subtitle = ref("");
+const description = ref("");
+
+const aiQuestion = ref("");
+const aiAnswer = ref("");
+
+function startGreeting() {
+  const titleMessage = "Hello World";
+  const subtitleMessage = "早安，世界。";
+  const descriptionMessage = "一個致力於網際網路發展的組織。臺灣網際網路技術推廣組織";
+  typing(title, titleMessage);
+  typing(subtitle, subtitleMessage);
+  typing(description, descriptionMessage);
+}
+
+function startMeeting() {
+  askAi(aiMessages, aiQuestion).
+    then(({content}) => {
+      typing(aiAnswer, content);
+    });
+}
+
+function choose(choices) {
+  const seed = Math.random();
+  const index = Math.floor(seed * choices.length);
+  return choices[index];
+}
+
+function askAi(historyMessages, userPrompt) {
+  historyMessages.push({
+    "role": "user",
+    "content": userPrompt,
+  });
+  return new Promise((resolve) => {
+    ky.post(aiApiUrl, {
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.7,
+      "messages": historyMessages,
+    }).
+      json().
+      then((data) => {
+        const choice = choose(data.choices);
+        resolve(choice.message);
       });
-    },
-    goUrl(url) {
-      window.open(url);
-    },
-    choose(choices) {
-      const seed = Math.random();
-      const index = Math.floor(seed * choices.length);
-      return choices[index];
-    },
-    askAi(historyMessages, userPrompt) {
-      historyMessages.push({
-        "role": "user",
-        "content": userPrompt,
-      });
-      return new Promise((resolve) => {
-        resolve("None");
-      });
-    },
-    typing(field, fieldName, text) {
-      for (const i in text) {
-        setTimeout(() => {
-          field[fieldName] += text[i];
-        }, i * 60);
-      }
-    },
-  },
-  mounted() {
-    this.greeting();
-    this.meeting();
+  });
+}
+
+function typing(refTarget, message) {
+  for (const i in message) {
+    setTimeout(() => {
+      refTarget.value += message[i];
+    }, i * 60);
   }
 }
+
+onMounted(() => {
+  startGreeting();
+  startMeeting();
+});
 </script>
