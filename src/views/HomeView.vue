@@ -242,7 +242,7 @@ const title = ref("");
 const subtitle = ref("");
 const description = ref("");
 
-const aiQuestion = ref("");
+const aiQuestion = ref("嗨！請用一句話簡介你自己。");
 const aiAnswer = ref("");
 
 function startGreeting() {
@@ -255,7 +255,7 @@ function startGreeting() {
 }
 
 function startMeeting() {
-  askAi(aiMessages, aiQuestion).
+  askAi(aiMessages, aiQuestion.value).
     then(({content}) => {
       typing(aiAnswer, content);
     });
