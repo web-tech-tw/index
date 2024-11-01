@@ -44,7 +44,7 @@ export const menuItems = [
       {
         name: "meJob 咪價",
         description: "自由的工作機會平台",
-        icon: "ClipboardIcon",
+        icon: "BriefcaseIcon",
         onClick: () => window.open("/mejob")
       },
       {
