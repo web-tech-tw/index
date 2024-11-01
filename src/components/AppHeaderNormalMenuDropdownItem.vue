@@ -28,8 +28,6 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-
 import DynamicHeroIcon from "./DynamicHeroIcon.vue";
 import DynamicImageIcon from "./DynamicImageIcon.vue";
 
@@ -49,7 +47,5 @@ const props = defineProps({
   },
 });
 
-const isHeroIcon = computed(() => {
-  return props.icon.endsWith("Icon");
-});
+const isHeroIcon = props.icon.endsWith("Icon");
 </script>
