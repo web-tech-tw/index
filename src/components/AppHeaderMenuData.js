@@ -42,6 +42,12 @@ export const menuItems = [
         onClick: () => window.open("/chew")
       },
       {
+        name: "meJob 咪價",
+        description: "自由的工作機會平台",
+        icon: "ClipboardIcon",
+        onClick: () => window.open("/mejob")
+      },
+      {
         name: "Lucid",
         description: "基於純網頁運行的 Linux x86 相容虛擬電腦",
         icon: "BoltIcon",
