@@ -42,12 +42,6 @@
               <li>
                 <a
                   class="hover:text-gray-900"
-                  href="https://github.com/web-tech-tw/swollen"
-                >Swollen</a>
-              </li>
-              <li>
-                <a
-                  class="hover:text-gray-900"
                   href="https://github.com/web-tech-tw/sara"
                 >Sara 無密碼式身分認證系統</a>
               </li>
