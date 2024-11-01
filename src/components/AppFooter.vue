@@ -75,13 +75,13 @@
               <li>
                 <a
                   class="hover:text-gray-900"
-                  href="/mejob/#/hiring"
+                  href="/mejob/#/resumes"
                 >徵才平台</a>
               </li>
               <li>
                 <a
                   class="hover:text-gray-900"
-                  href="/mejob/#/jobs"
+                  href="/mejob/#/careers"
                 >求職平台</a>
               </li>
               <li>

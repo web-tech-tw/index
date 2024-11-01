@@ -19,13 +19,13 @@ export const menuItems = [
       {
         name: "LINE OpenChat",
         description: "提供了能在各領域彼此互相切磋、協助的社群空間",
-        icon: "ChatBubbleLeftRightIcon",
+        icon: "LINE",
         onClick: () => window.open("/openchat")
       },
       {
         name: "Discord",
         description: "這是我們的 Discord 伺服器，自由多元的交流空間",
-        icon: "ChatBubbleLeftRightIcon",
+        icon: "Discord",
         onClick: () => window.open("https://discord.gg/nM7ub6Dz5J")
       }
     ]
@@ -52,7 +52,7 @@ export const menuItems = [
   {
     name: "GitHub",
     type: "function",
-    icon: "ServerStackIcon",
+    icon: "GitHub",
     onClick: () => window.open("https://github.com/web-tech-tw")
   }
 ];

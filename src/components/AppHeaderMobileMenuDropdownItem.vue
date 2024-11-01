@@ -3,11 +3,18 @@
     class="-m-3 p-3 flex w-full items-center rounded-md text-gray-900 hover:text-gray-700"
     type="button"
   >
-    <dynamic-hero-icon
-      v-if="props.icon"
-      :name="props.icon"
-      class="rounded-full w-6 h-6 mr-4"
-    />
+    <div v-if="props.icon">
+      <dynamic-hero-icon
+        v-if="isHeroIcon"
+        :name="props.icon"
+        class="rounded-full w-6 h-6 mr-4"
+      />
+      <dynamic-image-icon
+        v-else
+        :name="props.icon"
+        class="rounded-full w-6 h-6 mr-4"
+      />
+    </div>
     <slot name="prepend" />
     <div class="text-left">
       <div class="text-base font-medium">
@@ -21,7 +28,10 @@
 </template>
 
 <script setup>
-import DynamicHeroIcon from "./DynamicHeroIcon.vue"
+import { computed } from "vue";
+
+import DynamicHeroIcon from "./DynamicHeroIcon.vue";
+import DynamicImageIcon from "./DynamicImageIcon.vue";
 
 const props = defineProps({
   name: {
@@ -37,5 +47,9 @@ const props = defineProps({
     required: false,
     default: () => "",
   },
+});
+
+const isHeroIcon = computed(() => {
+  return props.icon.endsWith("Icon");
 });
 </script>
