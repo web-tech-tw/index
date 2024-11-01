@@ -36,6 +36,12 @@ export const menuItems = [
     status: "online_service",
     children: [
       {
+        name: "Nymph 寧芙",
+        description: "社群驅動人工智慧技術平台",
+        icon: "SparklesIcon",
+        onClick: () => window.open("/nymph")
+      },
+      {
         name: "Chew 口香糖",
         description: "文字片段分享平台",
         icon: "ClipboardIcon",
