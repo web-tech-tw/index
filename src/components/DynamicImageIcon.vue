@@ -7,7 +7,9 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import LINE from "/src/assets/icons/LINE.svg";
+import Discord from "/src/assets/icons/Discord.svg";
+import GitHub from "/src/assets/icons/GitHub.svg";
 
 const props = defineProps({
   name: {
@@ -21,7 +23,6 @@ const props = defineProps({
   },
 });
 
-const resource = computed(() => {
-    return `/src/assets/icons/${props.name}.svg`;
-});
+const allIcons = {LINE, Discord, GitHub};
+const resource = allIcons[props.name];
 </script>
