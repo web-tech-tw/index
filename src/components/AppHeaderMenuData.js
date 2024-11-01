@@ -27,6 +27,12 @@ export const menuItems = [
         description: "這是我們的 Discord 伺服器，自由多元的交流空間",
         icon: "Discord",
         onClick: () => window.open("/discord")
+      },
+      {
+        name: "Wiki",
+        description: "自由的資訊科技技術百科全書",
+        icon: "AcademicCapIcon",
+        onClick: () => window.open("/wiki")
       }
     ]
   },
