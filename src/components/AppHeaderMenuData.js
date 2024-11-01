@@ -26,7 +26,7 @@ export const menuItems = [
         name: "Discord",
         description: "這是我們的 Discord 伺服器，自由多元的交流空間",
         icon: "Discord",
-        onClick: () => window.open("https://discord.gg/nM7ub6Dz5J")
+        onClick: () => window.open("/discord")
       }
     ]
   },
