@@ -275,7 +275,7 @@ const askAi = (historyMessages, userPrompt) => {
   return new Promise((resolve) => {
     ky.post(aiApiUrl, {
       json: {
-        "model": "gpt-3.5-turbo",
+        "model": "gpt-4-turbo",
         "temperature": 0.7,
         "messages": historyMessages,
       },
