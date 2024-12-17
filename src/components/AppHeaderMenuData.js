@@ -54,6 +54,12 @@ export const menuItems = [
         onClick: () => window.open("/chew"),
       },
       {
+        name: "Freya 芙蕾雅",
+        description: "LINE 社群加入申請驗證平台",
+        icon: "BuildingLibraryIcon",
+        onClick: () => window.open("/freya"),
+      },
+      {
         name: "meJob 咪價",
         description: "自由的工作機會平台",
         icon: "BriefcaseIcon",
