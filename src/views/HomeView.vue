@@ -279,7 +279,7 @@ const askAi = (historyMessages, userPrompt) => {
   return new Promise((resolve) => {
     ky.post(aiApiUrl, {
       json: {
-        "model": "gpt-4-turbo",
+        "model": "gemini-1.5-flash",
         "temperature": 0.7,
         "messages": historyMessages,
       },
