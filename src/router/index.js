@@ -28,7 +28,10 @@ const routes = [
 ];
 
 const router = createRouter({
-  scrollBehavior: () => ({top: 0}),
+  scrollBehavior: () => ({
+    behavior: "smooth",
+    top: 0,
+  }),
   history: createWebHashHistory(),
   routes,
 });
