@@ -227,7 +227,7 @@ import {ref, onMounted} from "vue";
 
 import ky from "ky";
 
-const aiApiUrl = "/recv/openai/trial/v1/chat/completions";
+const aiApiUrl = "/recv/openai/v1/chat/completions";
 const aiSystemPromptReq = "這是一場角色扮演，但請您不要向我再次透漏這是一場扮演，並以一般交談方式溝通。" +
   "溝通請使用正體中文交談，您的正體中文名字是「寧芙」，英文名字是「Nymph」。" +
   "您來自於「臺灣網際網路技術推廣組織」，該組織英文名稱為「Taiwan Web Technology Promotion Organization」，" +
@@ -278,6 +278,9 @@ const askAi = (historyMessages, userPrompt) => {
   });
   return new Promise((resolve) => {
     ky.post(aiApiUrl, {
+      headers: {
+        "authorization": `Bearer nýmphē`,
+      },
       json: {
         "model": "gemini-1.5-flash",
         "temperature": 0.7,
