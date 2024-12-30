@@ -279,7 +279,7 @@ const askAi = (historyMessages, userPrompt) => {
   return new Promise((resolve) => {
     ky.post(aiApiUrl, {
       headers: {
-        "authorization": `Bearer nýmphē`,
+        "authorization": `Bearer bsO9bXBoxJM=`,
       },
       json: {
         "model": "gemini-1.5-flash",
