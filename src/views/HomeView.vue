@@ -279,10 +279,10 @@ const askAi = (historyMessages, userPrompt) => {
   return new Promise((resolve) => {
     ky.post(aiApiUrl, {
       headers: {
-        "authorization": `Bearer groq zr3Pjc68z4bOtw==`,
+        "authorization": `Bearer nymph zr3Pjc68z4bOtw==`,
       },
       json: {
-        "model": "llama-3.1-8b-instant",
+        "model": "auto",
         "temperature": 0.7,
         "messages": historyMessages,
       },
