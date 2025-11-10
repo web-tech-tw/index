@@ -1,13 +1,11 @@
 <template>
-  <component
-    :is="resource"
+  <UIcon
+    :name="iconName"
     v-bind="props"
   />
 </template>
 
 <script setup>
-import * as allIcons from "@heroicons/vue/24/outline";
-
 const props = defineProps({
   name: {
     type: String,
@@ -20,5 +18,12 @@ const props = defineProps({
   },
 });
 
-const resource = allIcons[props.name];
+// Convert heroicon name like "BeakerIcon" to "i-heroicons-beaker"
+const iconName = computed(() => {
+  const name = props.name.replace(/Icon$/, ''); // Remove "Icon" suffix
+  // Convert PascalCase to kebab-case
+  const kebabCase = name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+  return `i-heroicons-${kebabCase}`;
+});
 </script>
+

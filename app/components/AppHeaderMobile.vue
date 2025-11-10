@@ -17,7 +17,7 @@
               type="button"
             >
               <span class="sr-only">Close menu</span>
-              <x-mark-icon class="h-6 w-6" />
+              <UIcon name="i-heroicons-x-mark" class="h-6 w-6" />
             </button>
           </div>
         </div>
@@ -49,8 +49,6 @@
 
 <script setup>
 import {inject, watch} from "vue";
-
-import {XMarkIcon} from "@heroicons/vue/24/outline";
 
 import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue";
 import AppHeaderMobileMenuDropdown from "./AppHeaderMobileMenuDropdown.vue";

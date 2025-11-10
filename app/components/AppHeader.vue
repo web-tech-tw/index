@@ -21,7 +21,7 @@
           class="-mr-2 -my-2 md:hidden"
           @click="onClickMobileMenuBtnOpen"
         >
-          <bars4-icon class="h-6 w-6" />
+          <UIcon name="i-heroicons-bars-4" class="h-6 w-6" />
         </app-header-mobile-icon-button>
       </div>
     </div>
@@ -34,8 +34,6 @@
 
 <script setup>
 import {ref, onMounted, onUnmounted, provide} from "vue";
-
-import {Bars4Icon} from "@heroicons/vue/24/outline";
 
 import {
   title,

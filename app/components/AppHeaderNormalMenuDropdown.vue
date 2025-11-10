@@ -7,7 +7,7 @@
       @click="onClickDropdown"
     >
       <span>{{ props.name }}</span>
-      <chevron-down-icon class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" />
+      <UIcon name="i-heroicons-chevron-down" class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" />
     </button>
     <div
       class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
@@ -33,8 +33,6 @@
 
 <script setup>
 import {ref, inject, watch} from "vue";
-
-import {ChevronDownIcon} from "@heroicons/vue/24/outline";
 
 import AppHeaderNormalMenuDropdownItem from "./AppHeaderNormalMenuDropdownItem.vue";
 
