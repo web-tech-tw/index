@@ -27,8 +27,6 @@ import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue";
 
 import {onClickSara} from "./AppHeaderMenuData.js";
 
-import {useProfile} from "../plugins/profile.js";
-
 const profile = useProfile();
 
 const nickname = computed(() => {

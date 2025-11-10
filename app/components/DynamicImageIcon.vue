@@ -7,9 +7,9 @@
 </template>
 
 <script setup>
-import LINE from "/src/assets/icons/LINE.svg";
-import Discord from "/src/assets/icons/Discord.svg";
-import GitHub from "/src/assets/icons/GitHub.svg";
+import LINE from "~/assets/icons/LINE.svg";
+import Discord from "~/assets/icons/Discord.svg";
+import GitHub from "~/assets/icons/GitHub.svg";
 
 const props = defineProps({
   name: {
