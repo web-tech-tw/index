@@ -1,6 +1,6 @@
 <template>
   <button
-    class="-m-3 p-3 flex w-full items-center rounded-md text-gray-900 hover:text-gray-700 cursor-pointer"
+    :class="buttonClass"
     type="button"
   >
     <div v-if="props.icon">
@@ -28,6 +28,7 @@
 </template>
 
 <script setup>
+import {computed} from "vue";
 import DynamicHeroIcon from "./DynamicHeroIcon.vue";
 import DynamicImageIcon from "./DynamicImageIcon.vue";
 
@@ -45,7 +46,16 @@ const props = defineProps({
     required: false,
     default: () => "",
   },
+  variant: {
+    type: String,
+    default: "mobile", // 'mobile' | 'normal'
+    validator: (value) => ["mobile", "normal"].includes(value),
+  },
 });
 
 const isHeroIcon = props.icon.endsWith("Icon");
+
+const buttonClass = computed(() => {
+  return "-m-3 p-3 flex w-full items-center rounded-md text-gray-900 hover:text-gray-700 cursor-pointer";
+});
 </script>
