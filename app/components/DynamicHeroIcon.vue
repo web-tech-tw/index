@@ -5,18 +5,13 @@
   />
 </template>
 
-<script setup>
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  class: {
-    type: String,
-    required: false,
-    default: () => "",
-  },
-});
+<script setup lang="ts">
+import {computed} from "vue"; // Import removed - added Vue import
+
+const props = defineProps<{
+  name: string;
+  class?: string;
+}>();
 
 // Convert heroicon name like "BeakerIcon" to "i-heroicons-beaker"
 const iconName = computed(() => {

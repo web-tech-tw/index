@@ -16,16 +16,16 @@
   </button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {watch} from "vue";
 
-let timer;
+let timer: ReturnType<typeof setTimeout> | null = null;
 
-const model = defineModel({
-  type: String,
+const model = defineModel<string>({
+  default: "",
 });
 
-const onClickClose = () => {
+const onClickClose = (): void => {
   if (timer) {
     clearTimeout(timer);
   }

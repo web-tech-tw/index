@@ -32,44 +32,35 @@
   </div>
 </template>
 
-<script setup>
-import {ref, inject, watch, computed} from "vue";
+<script setup lang="ts">
+import {ref, inject, watch, computed, type Ref} from "vue";
 
 import AppHeaderMenuDropdownItem from "./AppHeaderMenuDropdownItem.vue";
+import type {MenuDropdownChild} from "./AppHeaderMenuData";
 
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  children: {
-    type: Array,
-    required: true,
-  },
-  variant: {
-    type: String,
-    default: "mobile", // 'mobile' | 'normal'
-    validator: (value) => ["mobile", "normal"].includes(value),
-  },
-});
+const props = defineProps<{
+  name: string;
+  children: MenuDropdownChild[];
+  variant?: "mobile" | "normal";
+}>();
 
 const isDropdownOpened = ref(false);
 
-const parentMenuState = inject("parent-menu-state");
+const parentMenuState = inject<Ref<boolean>>("parent-menu-state")!;
 watch(parentMenuState, (value) => {
   if (!value) {
     isDropdownOpened.value = false;
   }
 });
 
-const onClickDropdown = () => {
+const onClickDropdown = (): void => {
   isDropdownOpened.value = !isDropdownOpened.value;
   if (isDropdownOpened.value) {
     parentMenuState.value = true;
   }
 };
 
-const onClickItem = (item) => {
+const onClickItem = (item: MenuDropdownChild): void => {
   parentMenuState.value = false;
   item.onClick();
 };

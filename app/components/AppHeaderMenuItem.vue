@@ -24,29 +24,18 @@
   </button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {computed} from "vue";
 import DynamicHeroIcon from "./DynamicHeroIcon.vue";
 import DynamicImageIcon from "./DynamicImageIcon.vue";
 
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  icon: {
-    type: String,
-    required: false,
-    default: () => "",
-  },
-  variant: {
-    type: String,
-    default: "mobile", // 'mobile' | 'normal'
-    validator: (value) => ["mobile", "normal"].includes(value),
-  },
-});
+const props = defineProps<{
+  name: string;
+  icon?: string;
+  variant?: "mobile" | "normal";
+}>();
 
-const isHeroIcon = props.icon.endsWith("Icon");
+const isHeroIcon = props.icon?.endsWith("Icon") ?? false;
 
 const buttonClass = computed(() => {
   const base = "flex items-center rounded-md hover:text-gray-700 cursor-pointer";

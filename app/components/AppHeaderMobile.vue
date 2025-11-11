@@ -49,8 +49,8 @@
   </div>
 </template>
 
-<script setup>
-import {inject, watch} from "vue";
+<script setup lang="ts">
+import {inject, watch, type Ref} from "vue";
 
 import AppHeaderMenuItem from "./AppHeaderMenuItem.vue";
 import AppHeaderMenuDropdown from "./AppHeaderMenuDropdown.vue";
@@ -60,22 +60,25 @@ import {
   label,
   isSaraEnabled,
   menuItems,
-} from "./AppHeaderMenuData.js";
+  type MenuFunctionItem,
+} from "./AppHeaderMenuData";
 
-const emit = defineEmits(["close"]);
+const emit = defineEmits<{
+  close: [];
+}>();
 
-const parentMenuState = inject("parent-menu-state");
+const parentMenuState = inject<Ref<boolean>>("parent-menu-state")!;
 watch(parentMenuState, (value) => {
   if (!value) {
     emit("close");
   }
 });
 
-const onClickMobileMenuClose = () => {
+const onClickMobileMenuClose = (): void => {
   emit("close");
 };
 
-const onClickItem = (item) => {
+const onClickItem = (item: MenuFunctionItem): void => {
   parentMenuState.value = false;
   item.onClick();
 };

@@ -1,12 +1,23 @@
 import {jwtDecode} from "jwt-decode";
 
-export const useProfile = () => {
+interface JwtPayload {
+  exp: number;
+  user: UserProfile;
+}
+
+export interface UserProfile {
+  nickname: string;
+  avatar_hash: string;
+  [key: string]: unknown;
+}
+
+export const useProfile = (): UserProfile | null => {
   if (!import.meta.client) {
     return null;
   }
 
   const config = useRuntimeConfig();
-  const saraTokenName = config.public.saraTokenName || 'unified_token';
+  const saraTokenName = (config.public.saraTokenName as string) || 'unified_token';
 
   const saraToken = localStorage.getItem(saraTokenName);
   if (!saraToken) {
@@ -14,7 +25,7 @@ export const useProfile = () => {
   }
 
   try {
-    const data = jwtDecode(saraToken);
+    const data = jwtDecode<JwtPayload>(saraToken);
     if (Date.now() >= data.exp * 1000) {
       throw new Error("sara token expired");
     }

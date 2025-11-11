@@ -35,8 +35,8 @@
   </div>
 </template>
 
-<script setup>
-import {ref, onMounted, onUnmounted, provide} from "vue";
+<script setup lang="ts">
+import {ref, onMounted, onUnmounted, provide, type Ref} from "vue";
 
 import {
   title,
@@ -44,30 +44,31 @@ import {
   label,
   isSaraEnabled,
   menuItems,
-} from "./AppHeaderMenuData.js";
+} from "./AppHeaderMenuData";
 
 import AppHeaderNormal from "./AppHeaderNormal.vue";
 import AppHeaderMobile from "./AppHeaderMobile.vue";
 
 const isMobileMenuOpened = ref(false);
 
-const parentMenuState = ref(true);
+const parentMenuState: Ref<boolean> = ref(true);
 provide("parent-menu-state", parentMenuState);
 
 const isMenuItemExist = isSaraEnabled || menuItems.length;
 
-const onClickMobileMenuBtnOpen = () => {
+const onClickMobileMenuBtnOpen = (): void => {
   isMobileMenuOpened.value = true;
   parentMenuState.value = true;
 };
 
-const onClickMobileMenuBtnClose = () => {
+const onClickMobileMenuBtnClose = (): void => {
   isMobileMenuOpened.value = false;
   parentMenuState.value = false;
 };
 
-const onDocumentClick = (e) => {
-  if (!document.querySelector(".app-header").contains(e.target)) {
+const onDocumentClick = (e: MouseEvent): void => {
+  const target = e.target as HTMLElement;
+  if (!document.querySelector(".app-header")?.contains(target)) {
     parentMenuState.value = false;
   }
 };

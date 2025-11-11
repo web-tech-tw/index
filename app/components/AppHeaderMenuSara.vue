@@ -22,20 +22,16 @@
   </app-header-menu-item>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {computed} from "vue";
 
 import AppHeaderMenuItem from "./AppHeaderMenuItem.vue";
 
-import {onClickSara} from "./AppHeaderMenuData.js";
+import {onClickSara} from "./AppHeaderMenuData";
 
-const props = defineProps({
-  variant: {
-    type: String,
-    default: "mobile", // 'mobile' | 'normal'
-    validator: (value) => ["mobile", "normal"].includes(value),
-  },
-});
+const props = defineProps<{
+  variant?: "mobile" | "normal";
+}>();
 
 const profile = useProfile();
 
@@ -43,11 +39,12 @@ const loginText = "登入";
 const loginIcon = props.variant === "mobile" ? "ArrowRightOnRectangleIcon" : "";
 
 const nickname = computed(() => {
-  const {nickname} = profile;
-  return nickname;
+  if (!profile) return "";
+  return profile.nickname;
 });
 
 const identicon = computed(() => {
+  if (!profile) return "";
   const {avatar_hash: avatarHash} = profile;
   return `https://api.gravatar.com/avatar/${avatarHash}?d=identicon`;
 });
@@ -58,7 +55,7 @@ const avatarClass = computed(() => {
     : "rounded-full w-8 h-8 mr-2";
 });
 
-const onClick = () => {
+const onClick = (): void => {
   onClickSara(profile);
 };
 </script>

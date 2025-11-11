@@ -21,8 +21,8 @@
   </nav>
 </template>
 
-<script setup>
-import {inject} from "vue";
+<script setup lang="ts">
+import {inject, type Ref} from "vue";
 
 import AppHeaderMenuItem from "./AppHeaderMenuItem.vue";
 import AppHeaderMenuDropdown from "./AppHeaderMenuDropdown.vue";
@@ -31,11 +31,12 @@ import AppHeaderMenuSara from "./AppHeaderMenuSara.vue";
 import {
   isSaraEnabled,
   menuItems,
-} from "./AppHeaderMenuData.js";
+  type MenuFunctionItem,
+} from "./AppHeaderMenuData";
 
-const parentMenuState = inject("parent-menu-state");
+const parentMenuState = inject<Ref<boolean>>("parent-menu-state")!;
 
-const onClickItem = (item) => {
+const onClickItem = (item: MenuFunctionItem): void => {
   parentMenuState.value = false;
   item.onClick();
 };

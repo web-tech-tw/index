@@ -1,16 +1,41 @@
+import type {UserProfile} from "~/composables/useProfile.client";
+
 export const title = "Taiwan Web Technology Promotion Organization";
 export const subtitle = "臺灣網際網路技術推廣組織";
 export const label = "Web-Tech-TW";
 
 export const isSaraEnabled = true;
-export const onClickSara = () => {
+export const onClickSara = (_profile: UserProfile | null = null): void => {
   const {
     VITE_SARA_INTE_HOST: saraInteHost,
   } = import.meta.env;
   location.assign(saraInteHost);
 };
 
-export const menuItems = [
+export interface MenuDropdownChild {
+  name: string;
+  description: string;
+  icon: string;
+  onClick: () => void;
+}
+
+export interface MenuDropdownItem {
+  name: string;
+  type: "dropdown";
+  status: string;
+  children: MenuDropdownChild[];
+}
+
+export interface MenuFunctionItem {
+  name: string;
+  type: "function";
+  icon: string;
+  onClick: () => void;
+}
+
+export type MenuItem = MenuDropdownItem | MenuFunctionItem;
+
+export const menuItems: MenuItem[] = [
   {
     name: "交流平台",
     type: "dropdown",
@@ -24,7 +49,7 @@ export const menuItems = [
       },
       {
         name: "Discord",
-        description: "這是我們的 Discord 伺服器，自由多元的交流空間",
+        description: "這是我們的 Discord 伺服器,自由多元的交流空間",
         icon: "Discord",
         onClick: () => window.open("/discord"),
       },

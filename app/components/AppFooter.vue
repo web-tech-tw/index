@@ -157,8 +157,8 @@
   </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const config = useRuntimeConfig();
-const homeInteHost = config.public.homeInteHost;
+const homeInteHost = (config.public.homeInteHost as string) || "";
 const year = new Date().getFullYear();
 </script>
