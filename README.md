@@ -21,11 +21,17 @@
 
 ### 安裝相依套件
 
-本專案使用 Node.js 作為開發環境，請先安裝 Node.js。
+本專案使用 Bun 作為套件管理器，推薦於 `Node.js 18` 以上版本開發與編譯本系統。
+
+請先安裝 [Bun](https://bun.sh/) 或 Node.js。
 
 該指令會安裝專案所需的相依套件。
 
 ```sh
+# bun (推薦)
+bun install
+
+# npm
 npm install
 ```
 
@@ -34,6 +40,10 @@ npm install
 該指令會啟動開發除錯模式，可配合瀏覽器進行開發。當網頁變動時，會自動重新載入。
 
 ```sh
+# bun (推薦)
+bun run dev
+
+# npm
 npm run dev
 ```
 
@@ -42,6 +52,10 @@ npm run dev
 該指令會將專案編譯成正式產品模式，壓縮檔案並進行最佳化，最後輸出至 `.output` 目錄。
 
 ```sh
+# bun (推薦)
+bun run build
+
+# npm
 npm run build
 ```
 
@@ -50,6 +64,10 @@ npm run build
 在本地預覽生產環境編譯後的成果。
 
 ```sh
+# bun (推薦)
+bun run preview
+
+# npm
 npm run preview
 ```
 
