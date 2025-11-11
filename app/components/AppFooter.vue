@@ -9,28 +9,28 @@
             </h2>
             <ul class="mt-3 space-y-2">
               <li>
-                <router-link
+                <nuxt-link
                   class="hover:text-gray-900"
                   to="/about"
                 >
                   關於我們
-                </router-link>
+                </nuxt-link>
               </li>
               <li>
-                <router-link
+                <nuxt-link
                   class="hover:text-gray-900"
                   to="/contact"
                 >
                   聯絡我們
-                </router-link>
+                </nuxt-link>
               </li>
               <li>
-                <router-link
+                <nuxt-link
                   class="hover:text-gray-900"
                   to="/status"
                 >
                   系統資訊
-                </router-link>
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -137,12 +137,12 @@
         class="mr-3"
         href="https://github.com/web-tech-tw/index"
       >網站原始碼</a>
-      <router-link
+      <nuxt-link
         class="mr-3"
         to="/privacy"
       >
         隱私權政策
-      </router-link>
+      </nuxt-link>
     </div>
     <div class="max-w-7xl mx-auto mt-5 divide-y divide-gray-200 px-4 sm:px-6 md:px-8">
       &copy; {{ year }}
@@ -158,6 +158,7 @@
 </template>
 
 <script setup>
-const homeInteHost = import.meta.env.VITE_HOME_INTE_HOST;
+const config = useRuntimeConfig();
+const homeInteHost = config.public.homeInteHost;
 const year = new Date().getFullYear();
 </script>

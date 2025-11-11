@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <router-link to="/">
+          <nuxt-link to="/">
             <h1 class="flex-auto text-lg font-semibold text-gray-900 hidden sm:block">
               {{ title }}
             </h1>
@@ -13,7 +13,7 @@
             <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
               {{ label }}
             </h1>
-          </router-link>
+          </nuxt-link>
         </div>
         <app-header-normal />
         <app-header-mobile-icon-button
@@ -21,7 +21,7 @@
           class="-mr-2 -my-2 md:hidden"
           @click="onClickMobileMenuBtnOpen"
         >
-          <bars4-icon class="h-6 w-6" />
+          <UIcon name="i-heroicons-bars-4" class="h-6 w-6" />
         </app-header-mobile-icon-button>
       </div>
     </div>
@@ -34,8 +34,6 @@
 
 <script setup>
 import {ref, onMounted, onUnmounted, provide} from "vue";
-
-import {Bars4Icon} from "@heroicons/vue/24/outline";
 
 import {
   title,

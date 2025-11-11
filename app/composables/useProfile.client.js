@@ -1,10 +1,13 @@
 import {jwtDecode} from "jwt-decode";
 
-const {
-  VITE_SARA_TOKEN_NAME: saraTokenName,
-} = import.meta.env;
-
 export const useProfile = () => {
+  if (!import.meta.client) {
+    return null;
+  }
+
+  const config = useRuntimeConfig();
+  const saraTokenName = config.public.saraTokenName || 'unified_token';
+
   const saraToken = localStorage.getItem(saraTokenName);
   if (!saraToken) {
     return null;

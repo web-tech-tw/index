@@ -7,7 +7,7 @@
   >
     <div class="flex items-center space-x-2">
       <span>
-        <information-circle-icon class="h-5 w-5" />
+        <UIcon name="i-heroicons-information-circle" class="h-5 w-5" />
       </span>
       <span class="font-bold">
         {{ model }}
@@ -18,10 +18,6 @@
 
 <script setup>
 import {watch} from "vue";
-
-import {
-  InformationCircleIcon,
-} from "@heroicons/vue/24/outline";
 
 let timer;
 

@@ -1,10 +1,11 @@
 <template>
-  <app-header-normal-menu-item
+  <app-header-mobile-menu-item
     v-if="profile === null"
     name="登入"
+    icon="ArrowRightOnRectangleIcon"
     @click="onClick"
   />
-  <app-header-normal-menu-item
+  <app-header-mobile-menu-item
     v-else
     :name="nickname"
     @click="onClick"
@@ -13,20 +14,18 @@
       <img
         :src="identicon"
         :alt="nickname"
-        class="rounded-full w-8 h-8 mr-2"
+        class="rounded-full w-6 h-6 mr-4"
       >
     </template>
-  </app-header-normal-menu-item>
+  </app-header-mobile-menu-item>
 </template>
 
 <script setup>
 import {computed} from "vue";
 
-import AppHeaderNormalMenuItem from "./AppHeaderNormalMenuItem.vue";
+import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue";
 
 import {onClickSara} from "./AppHeaderMenuData.js";
-
-import {useProfile} from "../plugins/profile.js";
 
 const profile = useProfile();
 
