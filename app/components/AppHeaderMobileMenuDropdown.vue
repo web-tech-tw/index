@@ -2,7 +2,7 @@
   <div class="relative">
     <button
       aria-expanded="false"
-      class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full"
+      class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full cursor-pointer"
       type="button"
       @click="onClickDropdown"
     >
@@ -14,7 +14,7 @@
     >
       <div
         v-show="isDropdownOpened"
-        class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
+        class="rounded-lg shadow-lg overflow-hidden"
       >
         <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
           <app-header-mobile-menu-dropdown-item

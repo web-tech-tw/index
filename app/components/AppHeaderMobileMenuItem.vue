@@ -1,6 +1,6 @@
 <template>
   <button
-    class="-m-3 p-3 flex w-full items-center rounded-md text-gray-900 hover:text-gray-700"
+    class="-m-3 p-3 flex w-full items-center rounded-md text-gray-900 hover:text-gray-700 cursor-pointer"
     type="button"
   >
     <div v-if="props.icon">

@@ -1,7 +1,7 @@
 <template>
   <UIcon
     :name="iconName"
-    v-bind="props"
+    :class="props.class"
   />
 </template>
 
@@ -26,4 +26,3 @@ const iconName = computed(() => {
   return `i-heroicons-${kebabCase}`;
 });
 </script>
-
