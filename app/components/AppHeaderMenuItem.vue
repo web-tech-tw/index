@@ -49,10 +49,10 @@ const props = defineProps({
 const isHeroIcon = props.icon.endsWith("Icon");
 
 const buttonClass = computed(() => {
-  const base = "flex items-center rounded-md text-gray-900 hover:text-gray-700 cursor-pointer";
+  const base = "flex items-center rounded-md hover:text-gray-700 cursor-pointer";
   
   if (props.variant === "mobile") {
-    return `-m-3 p-3 w-full ${base}`;
+    return `text-gray-900 -m-3 p-3 w-full ${base}`;
   }
   
   return `h-8 text-gray-500 bg-white inline-flex text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${base}`;
