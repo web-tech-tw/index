@@ -6,23 +6,14 @@
   >
 </template>
 
-<script setup>
-import LINE from "~/assets/icons/LINE.svg";
-import Discord from "~/assets/icons/Discord.svg";
-import GitHub from "~/assets/icons/GitHub.svg";
+<script setup lang="ts">
+const props = defineProps<{
+  name: string;
+  class?: string;
+}>();
 
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  class: {
-    type: String,
-    required: false,
-    default: () => "",
-  },
-});
+type IconName = "Unknown";
 
-const allIcons = {LINE, Discord, GitHub};
-const resource = allIcons[props.name];
+const allIcons: Record<IconName, string> = {Unknown: ""};
+const resource = allIcons[props.name as IconName];
 </script>

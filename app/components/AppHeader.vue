@@ -16,13 +16,16 @@
           </nuxt-link>
         </div>
         <app-header-normal />
-        <app-header-mobile-icon-button
+        <button
           v-if="isMenuItemExist"
-          class="-mr-2 -my-2 md:hidden"
+          class="-mr-2 -my-2 md:hidden bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 cursor-pointer"
+          type="button"
+          aria-expanded="false"
           @click="onClickMobileMenuBtnOpen"
         >
+          <span class="sr-only">Open menu</span>
           <UIcon name="i-heroicons-bars-4" class="h-6 w-6" />
-        </app-header-mobile-icon-button>
+        </button>
       </div>
     </div>
     <app-header-mobile
@@ -32,8 +35,8 @@
   </div>
 </template>
 
-<script setup>
-import {ref, onMounted, onUnmounted, provide} from "vue";
+<script setup lang="ts">
+import {ref, onMounted, onUnmounted, provide, type Ref} from "vue";
 
 import {
   title,
@@ -41,32 +44,28 @@ import {
   label,
   isSaraEnabled,
   menuItems,
-} from "./AppHeaderMenuData.js";
-
-import AppHeaderNormal from "./AppHeaderNormal.vue";
-import AppHeaderMobile from "./AppHeaderMobile.vue";
-
-import AppHeaderMobileIconButton from "./AppHeaderMobileIconButton.vue";
+} from "../data/AppHeaderMenuData";
 
 const isMobileMenuOpened = ref(false);
 
-const parentMenuState = ref(true);
+const parentMenuState: Ref<boolean> = ref(true);
 provide("parent-menu-state", parentMenuState);
 
 const isMenuItemExist = isSaraEnabled || menuItems.length;
 
-const onClickMobileMenuBtnOpen = () => {
+const onClickMobileMenuBtnOpen = (): void => {
   isMobileMenuOpened.value = true;
   parentMenuState.value = true;
 };
 
-const onClickMobileMenuBtnClose = () => {
+const onClickMobileMenuBtnClose = (): void => {
   isMobileMenuOpened.value = false;
   parentMenuState.value = false;
 };
 
-const onDocumentClick = (e) => {
-  if (!document.querySelector(".app-header").contains(e.target)) {
+const onDocumentClick = (e: MouseEvent): void => {
+  const target = e.target as HTMLElement;
+  if (!document.querySelector(".app-header")?.contains(target)) {
     parentMenuState.value = false;
   }
 };

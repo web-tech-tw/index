@@ -27,19 +27,21 @@
               v-for="(item, index) in menuItems"
               :key="index"
             >
-              <app-header-mobile-menu-dropdown
+              <app-header-menu-dropdown
                 v-if="item.type === 'dropdown'"
                 :name="item.name"
                 :children="item.children"
+                variant="mobile"
               />
-              <app-header-mobile-menu-item
+              <app-header-menu-item
                 v-else
                 :name="item.name"
                 :icon="item.icon"
+                variant="mobile"
                 @click="onClickItem(item)"
               />
             </div>
-            <app-header-mobile-menu-sara v-if="isSaraEnabled" />
+            <app-header-menu-sara v-if="isSaraEnabled" variant="mobile" />
           </nav>
         </div>
       </div>
@@ -47,33 +49,32 @@
   </div>
 </template>
 
-<script setup>
-import {inject, watch} from "vue";
-
-import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue";
-import AppHeaderMobileMenuDropdown from "./AppHeaderMobileMenuDropdown.vue";
-import AppHeaderMobileMenuSara from "./AppHeaderMobileMenuSara.vue";
+<script setup lang="ts">
+import {inject, watch, type Ref} from "vue";
 
 import {
   label,
   isSaraEnabled,
   menuItems,
-} from "./AppHeaderMenuData.js";
+  type MenuFunctionItem,
+} from "../data/AppHeaderMenuData";
 
-const emit = defineEmits(["close"]);
+const emit = defineEmits<{
+  close: [];
+}>();
 
-const parentMenuState = inject("parent-menu-state");
+const parentMenuState = inject<Ref<boolean>>("parent-menu-state")!;
 watch(parentMenuState, (value) => {
   if (!value) {
     emit("close");
   }
 });
 
-const onClickMobileMenuClose = () => {
+const onClickMobileMenuClose = (): void => {
   emit("close");
 };
 
-const onClickItem = (item) => {
+const onClickItem = (item: MenuFunctionItem): void => {
   parentMenuState.value = false;
   item.onClick();
 };
