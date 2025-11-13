@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed} from "vue"; // Import removed - added Vue import
+import {computed} from "vue";
 
 const props = defineProps<{
   name: string;

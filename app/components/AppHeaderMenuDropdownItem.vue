@@ -29,8 +29,6 @@
 
 <script setup lang="ts">
 import {computed} from "vue";
-import DynamicHeroIcon from "./DynamicHeroIcon.vue";
-import DynamicImageIcon from "./DynamicImageIcon.vue";
 
 const props = defineProps<{
   name: string;
@@ -41,7 +39,15 @@ const props = defineProps<{
 
 const isHeroIcon = props.icon?.endsWith("Icon") ?? false;
 
-const buttonClass = computed(() => {
-  return "-m-3 p-3 flex w-full items-center rounded-md text-gray-900 hover:text-gray-700 cursor-pointer";
-});
+const buttonClass = computed(() => ([
+  "-m-3",
+  "p-3",
+  "flex",
+  "w-full",
+  "items-center",
+  "rounded-md",
+  "text-gray-900",
+  "hover:text-gray-700",
+  "cursor-pointer",
+]));
 </script>

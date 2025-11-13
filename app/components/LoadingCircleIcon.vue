@@ -21,12 +21,8 @@
   </svg>
 </template>
 
-<script setup>
-const props = defineProps({
-  class: {
-    type: String,
-    required: false,
-    default: () => "",
-  },
-});
+<script setup lang="ts">
+const props = defineProps<{
+  class?: string;
+}>();
 </script>

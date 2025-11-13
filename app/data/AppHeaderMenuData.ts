@@ -7,8 +7,13 @@ export const label = "Web-Tech-TW";
 export const isSaraEnabled = true;
 export const onClickSara = (_profile: UserProfile | null = null): void => {
   const {
-    VITE_SARA_INTE_HOST: saraInteHost,
-  } = import.meta.env;
+    public: publicConfig,
+  } = useRuntimeConfig();
+
+  const {
+    saraInteHost,
+  } = publicConfig;
+
   location.assign(saraInteHost);
 };
 
@@ -49,7 +54,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         name: "Discord",
-        description: "這是我們的 Discord 伺服器,自由多元的交流空間",
+        description: "這是我們的 Discord 伺服器，自由多元的交流空間",
         icon: "Discord",
         onClick: () => window.open("/discord"),
       },
