@@ -158,7 +158,13 @@
 </template>
 
 <script setup lang="ts">
-const config = useRuntimeConfig();
-const homeInteHost = (config.public.homeInteHost as string) || "";
+const {
+  public: publicConfig,
+} = useRuntimeConfig();
+
+const {
+  homeInteHost,
+} = publicConfig;
+
 const year = new Date().getFullYear();
 </script>
