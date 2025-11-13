@@ -16,13 +16,8 @@ export const useProfile = (): UserProfile | null => {
     return null;
   }
 
-  const {
-    public: publicConfig
-  } = useRuntimeConfig();
-
-  const {
-    saraTokenName,
-  } = publicConfig;
+  const config = useRuntimeConfig();
+  const saraTokenName = (config.public.saraTokenName as string) || 'unified_token';
 
   const saraToken = localStorage.getItem(saraTokenName);
   if (!saraToken) {
