@@ -1,5 +1,6 @@
 export default defineEventHandler(
-  (response) => ({
-    requestIP: getRequestIP(response),
-  })
+  (response) => useCat({
+    status: 200,
+    message: getRequestIP(response),
+  }),
 );
