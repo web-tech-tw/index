@@ -1,7 +1,10 @@
 <template>
-  <div class="relative">
+  <div
+    class="relative"
+    :style="{ zIndex: currentZIndex }"
+  >
     <button
-      aria-expanded="false"
+      :aria-expanded="isDropdownOpened"
       :class="buttonClass"
       type="button"
       @click="onClickDropdown"
@@ -11,6 +14,8 @@
     </button>
     <div
       :class="dropdownContainerClass"
+      :style="{ zIndex: currentZIndex }"
+      @click="bringToFront"
     >
       <div
         v-show="isDropdownOpened"
@@ -46,8 +51,17 @@ const props = defineProps<{
 }>();
 
 const isDropdownOpened = ref(false);
+const currentZIndex = ref<number | undefined>(undefined);
 
 const parentMenuState = inject<Ref<boolean>>("parent-menu-state")!;
+const getNextZIndex = inject<() => number>("get-next-z-index");
+
+const bringToFront = (): void => {
+  if (getNextZIndex) {
+    currentZIndex.value = getNextZIndex();
+  }
+};
+
 watch(parentMenuState, (value) => {
   if (!value) {
     isDropdownOpened.value = false;
@@ -58,6 +72,7 @@ const onClickDropdown = (): void => {
   isDropdownOpened.value = !isDropdownOpened.value;
   if (isDropdownOpened.value) {
     parentMenuState.value = true;
+    bringToFront();
   }
 };
 

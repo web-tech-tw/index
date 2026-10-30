@@ -51,6 +51,13 @@ const isMobileMenuOpened = ref(false);
 const parentMenuState: Ref<boolean> = ref(true);
 provide("parent-menu-state", parentMenuState);
 
+let zIndexCounter = 20;
+const getNextZIndex = (): number => {
+  zIndexCounter += 1;
+  return zIndexCounter;
+};
+provide("get-next-z-index", getNextZIndex);
+
 const isMenuItemExist = isSaraEnabled || menuItems.length;
 
 const onClickMobileMenuBtnOpen = (): void => {
@@ -70,11 +77,19 @@ const onDocumentClick = (e: MouseEvent): void => {
   }
 };
 
+const onKeydown = (e: KeyboardEvent): void => {
+  if (e.key === "Escape") {
+    parentMenuState.value = false;
+  }
+};
+
 onMounted(() => {
   document.addEventListener("click", onDocumentClick);
+  document.addEventListener("keydown", onKeydown);
 });
 
 onUnmounted(() => {
   document.removeEventListener("click", onDocumentClick);
+  document.removeEventListener("keydown", onKeydown);
 });
 </script>
